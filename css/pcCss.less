@@ -1,0 +1,492 @@
+/*头部的样式star*/
+#head{
+
+    
+    width: 100%;
+    height: 80px;
+   //background: pink;
+    position: relative;
+    .headMain{
+
+            .music { width:14px; height:14px; margin:50px 0 0 5px;background: url(../img/musicoff.gif);float: left;cursor: pointer; } 
+        
+        //background: deeppink;
+        width: 1100px;
+        height: 100%;
+        margin: 0 auto;
+        h1{
+
+            float: left;
+            margin-top: 30px;
+        }
+        .nav{
+            float: right;
+            margin-top: 50px;
+            li{
+                position: relative;
+                float: left;
+                margin-left: 40px;
+                .up{
+                    color: #000000;
+                    width: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0; 
+                    overflow: hidden;
+                    transition: 1s width;
+                }
+                &:hover .up{
+                    width: 100%;
+                }
+            }
+        }
+        .arrow{
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            bottom: -11px;
+            width: 21px;
+            height: 11px;
+            background: url(../img/arrow.png) no-repeat;
+            transition: 1s left;
+        }
+    }
+}
+#content{
+  position: relative;
+  background: deepskyblue;
+  overflow: hidden;
+  width: 100%;
+     .list{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		/*头部过渡的时候加一个*/
+		transition:1s top;
+         &>li{
+             position: relative;
+             /*整个背景图位置都居中，放大缩小时，不会偏移*/
+             background-position:50% 50% !important;
+             &>div{
+//               background: lightblue;
+                 width: 1100px;
+                 height: 520px;
+                 position: absolute;
+                 left: 0;
+                 right: 0;
+                 top: 0;
+                 bottom: 0; 
+                 margin:auto;
+//               overflow: hidden;
+                   
+             }
+         }
+          /*第一屏 start*/
+         .home{
+              position: relative;
+              z-index: 3;
+              background: url(../img/bg3.jpg) no-repeat;
+             .home1{
+                 transition: 1s;
+                 height: 100%;
+                 perspective: 1000px;
+                 transform-style: preserve-3d;
+                 li{
+                     width: 100%;
+                     height: 100%;
+                     position: absolute;left: 0;right: 0;top: 0;bottom: 0;visibility: hidden;
+                     &.active{visibility: visible;}
+                     &:nth-child(1){background:#dc6c5f;}
+                     &:nth-child(2){background:#95dc84;}
+                     &:nth-child(3){background:#64b9d2;}
+                     &:nth-child(4){background:#000000;}
+                     &> .item{color: white;text-align: center;margin-top: 200px;}
+                     &.leftHide{animation:1s lh ;visibility: hidden;}
+                     &.rightShow{animation:1s rs ;visibility: visible;}
+                    @keyframes lh{
+                        0%{visibility: visible;}
+                        50%{transform:translate(-40%,0) rotateY(30deg) scale(.8);}
+                        100%{transform: translateZ(-200px);}
+                    }
+                    @keyframes rs{
+                        0%{visibility: hidden;transform: translateZ(-200px);}
+                        50%{transform:translate(40%,0) rotateY(-30deg) scale(.8);}
+                        100%{}
+                      }
+                
+                /*点击左边*/
+                        &.rightHide{animation:1s rh ;visibility: hidden;}
+                        &.leftShow{animation:1s ls ;visibility: visible;}
+                        @keyframes rh{
+                            0%{visibility: visible;}
+                            50%{transform:translate(40%,0) rotateY(-30deg) scale(.8);}
+                            100%{transform: translateZ(-200px);}
+                        }
+                        @keyframes ls{
+                            0%{visibility: hidden;transform: translateZ(-200px);}
+                            50%{transform:translate(-40%,0) rotateY(30deg) scale(.8);}
+                            100%{}
+                        }
+     
+                 }
+             }
+              .home2{
+                   transition: 1s ;
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  right: 0;
+                  text-align: center;
+                  &>li{
+                      width: 20px;
+                      height: 20px;
+                      border-radius: 50%;
+                      background: rgba(255,255,255,0.5);
+                      display: inline-block;
+                      box-shadow:0 0 4px rgba(25,25,25,0.8);
+                      cursor: pointer;
+                       &.active{
+                      background: white;
+                      cursor: default;}
+              }                                          
+                  }
+                 
+             
+               
+              
+         }
+          /*第一屏 end*/
+         
+         
+         
+         
+         
+         
+         /*第er屏start*/
+         .course{
+             position: relative;
+             z-index:2 ;
+             
+             .plane1{ width:359px; height:283px; background:url(../img/plane1.png) no-repeat; position:absolute; left:300px; top:-100px; transition:1s;}
+             .plane2{ width:309px; height:249px; background:url(../img/plane2.png) no-repeat; position:absolute; left:-100px; top:200px; transition:1s;}
+             .plane3{ width:230px; height:182px; background:url(../img/plane3.png) no-repeat; position:absolute; left:300px; top:400px; transition:1s;}
+
+             
+             background: url(../img/bg2.jpg) no-repeat;
+             .course1{margin: 50px;  z-index: 3;
+                 position: relative;}
+             .course2{
+                   z-index: 3;
+                 position: relative;
+                 width: 400px;
+                 margin-left: 50px;
+                 color: white;
+                 overflow: hidden;
+             }
+             .course3{
+                 z-index: 3;
+                 position: absolute;
+                 right: 50px;
+                 top: 70px;
+                 width: 480px;
+//               background: deeppink;
+                
+                .line{ 
+                    position: absolute;
+                    top:-5px;
+                    display: inline-block;                 
+                    width: 9px;
+                    height: 410px;
+                    background: url(../img/plus_row.png) no-repeat;
+                    &:nth-child(1){left: -6px;}
+                    &:nth-child(2){left: 114px;}
+                    &:nth-child(3){left: 234px;}
+                    &:nth-child(4){left: 354px;}
+                    &:nth-child(5){left: 474px;}
+                }
+                
+                 .item{
+                 width: 120px;
+                 height: 132px;
+                 float: left;
+                 margin-top: 1px;
+                 position: relative;
+                 perspective: 1000px;
+//               transform-style: preserve-3d;
+                 &:hover .face{
+                     transform: rotateY(0deg);
+                 }
+                 &:hover .picface{
+                     transform: rotateY(360deg);
+                 }
+
+                 .picface{
+                    padding: 15px;
+                    box-sizing: border-box;
+                      /*为了撑开*/
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    backface-visibility: hidden;
+                    transition:1.5s transform;
+                    
+                    background: url(../img/binoli.png) no-repeat;
+                    background-position: 50% 50%;
+                    &:nth-of-type(2){
+                    background:url(../img/bks.png) no-repeat;
+                    background-position: 50% 50%;
+                    }
+              
+                 }
+                 .face{
+                    padding: 15px;
+                    box-sizing: border-box;
+                    background: #009ee0;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    transform: rotateY(-180deg);
+                    backface-visibility: hidden;
+                    transition:1.5s transform;
+                   
+                 }
+                 
+                 }
+             }
+           /*第三屏end*/
+        
+         
+             }
+         /*第三   屏样式start*/
+          .works{
+                .pencel1{ width:180px; height:97px; background:url(../img/pencel1.png) no-repeat; position:absolute; transition:1s; left:500px; top:0;}
+                .pencel2{ width:268px; height:38px; background:url(../img/pencel2.png) no-repeat; position:absolute; transition:1s; left:300px; top:250px;}
+                .pencel3{ width:441px; height:231px; background:url(../img/pencel3.png) no-repeat; position:absolute; transition:1s; left:650px; top:300px;}
+    
+               background: url(../img/bg5.jpg) no-repeat;
+               .commonTitle{
+                   margin: 50px 0 100px 50px;
+               }
+               /*works2 start*/
+               .works2{
+                   position: relative;
+                   z-index: 3;
+                   padding-left: 50px;
+                   .item{
+                       position: relative;
+                       float: left;
+                       width: 220px;
+                       height: 133px;
+                       overflow: hidden;
+                     
+                       margin:0 1px ;
+                       img{
+                           transition: 1s;
+                       }
+                       &:hover img{
+                           transform: scale(1.5) rotate(40deg);
+                       }
+                       &:hover .mask{
+                           opacity: 1;
+                       }
+                    .mask{
+                        position: absolute;
+                         top: 0;
+                         left: 0;
+                         width: 100%;
+                         height: 100%;
+                        background: rgba(25,25,25,0.8);
+                        opacity: 0;
+                        color: white;
+                        padding: 15px;
+                        box-sizing:border-box ;
+                        transition: 0.5s;
+                         
+                    }
+                    
+                    .icon{
+                        background: url(../img/zoomico.png) no-repeat;
+                        height: 32px;
+                        width: 34px;
+                        margin: 10px auto;
+                        cursor:pointer; 
+                        transition:.5s; 
+                        &:hover{   
+                            background-position:0 -36px;
+                        }
+                      
+                    }
+                    
+                    
+                   }
+                   .item:last-of-type{width: 332px;}
+               }
+               /* works2 end*/
+              
+              /* works3 start*/
+               .works3{ 
+                   z-index: 3;
+                   width:167px; 
+                   height:191px; 
+                   background:url(../img/robot.png) no-repeat; 
+                   position:absolute; 
+                   left:900px; 
+                   top:170px; 
+                   /*定义动画，关键帧+循环时间10s 匀速 无线循环  */
+                   animation:works3Move 10s infinite linear; 
+                   @keyframes works3Move{/*50%到位置为left450px的地方，到起点算一个侦*/
+                    0%{transform: rotateY(0);}/*开始是不动*/
+                    49%{transform: rotateY(0);}/*49%的时候就还是保持原来的状态*/
+                    50%{left: 450px;transform: rotateY(180deg);}/*到50%时候就旋转180deg*/
+                    100%{transform: rotateY(180deg);}/*到100%再旋转*/
+            }
+                   }
+              /* works3 end*/
+             
+            
+                  }
+         /*第三屏样式end*/
+         
+
+         /*第四屏 start*/
+         .about{
+           background: url(../img/bg1.jpg) no-repeat;
+           .about1{ margin: 50px 0 100px 50px;} 
+           .about2{
+               width: 400px;
+               margin-left: 50px;
+            } 
+             
+            .item{
+                width: 260px;
+                height: 200px;
+                border: 5px solid rgba(255,255,255,.5);
+                border-radius:8px ;
+                z-index: 1;
+                overflow: hidden;
+
+                &:nth-child(1){
+                    position: absolute;
+                    left: 750px;
+                    top: 50px;
+                    transition:1s transform;
+                    .pic{ 
+                        width: 100%;
+                        height: 100%;
+                    background: url(../img/about2.jpg) no-repeat;
+                    transform: scale(1.5);
+                    transition:1s transform;
+                    }
+                }  
+              
+                &:nth-child(2){
+                    position: absolute;
+                    left: 600px;
+                    top: 290px;
+                    transition:1s transform;
+                    .pic{
+                        width: 100%;
+                        height: 100%;
+                         background: url(../img/about4.jpg) no-repeat;
+                          transform: scale(1.5);
+                          transition:1s transform;
+                    } 
+                }  
+                 
+                ul{
+                    
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    
+                    li{
+                        overflow: hidden;
+                        float: left;
+                        position: relative;
+                        img{
+                            position: absolute;
+                            transition:1s left,1s top;
+                        }
+                    }
+                    
+                    }
+                    &:hover .pic{transform: scale(1);transition: 0.5s;}
+            }
+            
+             
+            .line{
+                width:357px;
+                height:998px;
+                background: url(../img/greenLine.png) no-repeat;
+                position: absolute;
+                left: 50%;
+                top: -25px;
+                                                        
+            }
+            
+           
+               
+               
+          
+         
+         }
+          /*第四屏 end*/
+         
+         
+         /*第五屏  start*/
+         .team{
+             position: relative;
+             z-index: 2;
+             background: url(../img/bg3.jpg) no-repeat;
+                 .team1,.team2{
+                     margin: 50px;
+                     width: 400px;}
+                .team1{float: left; transition:1s transform;}
+                .team2{float: right; transition:1s transform;}
+                .team3{
+                    width: 944px;
+                    height: 448px;
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -472px;
+                    bottom: -150px; 
+                    }
+                .team3 > ul > li{
+                    width: 118px;
+                    height: 448px;
+                    float: left;
+                    background: url(../img/team.png) no-repeat;
+                &:nth-child(1){}
+                &:nth-child(2){background-position:-118px 0;}
+                &:nth-child(3){background-position:-236px 0;}
+                &:nth-child(4){background-position:-354px 0;}
+                &:nth-child(5){background-position:-472px 0;}
+                &:nth-child(6){background-position:-590px 0;}
+                &:nth-child(7){background-position:-708px 0;}
+                &:nth-child(8){background-position:-826px 0;}
+                }
+                 
+         
+         
+         
+         
+         }
+           /*第五屏 end*/
+         
+         
+         
+         
+         
+         
+         
+     }
+
+}
+/*头部的样式end*/

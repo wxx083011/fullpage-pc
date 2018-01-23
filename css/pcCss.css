@@ -1,0 +1,575 @@
+/*头部的样式star*/
+#head {
+  width: 100%;
+  height: 80px;
+  position: relative;
+}
+#head .headMain {
+  width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+}
+#head .headMain .music {
+  width: 14px;
+  height: 14px;
+  margin: 50px 0 0 5px;
+  background: url(../img/musicoff.gif);
+  float: left;
+  cursor: pointer;
+}
+#head .headMain h1 {
+  float: left;
+  margin-top: 30px;
+}
+#head .headMain .nav {
+  float: right;
+  margin-top: 50px;
+}
+#head .headMain .nav li {
+  position: relative;
+  float: left;
+  margin-left: 40px;
+}
+#head .headMain .nav li .up {
+  color: #000000;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: 1s width;
+}
+#head .headMain .nav li:hover .up {
+  width: 100%;
+}
+#head .headMain .arrow {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: -11px;
+  width: 21px;
+  height: 11px;
+  background: url(../img/arrow.png) no-repeat;
+  transition: 1s left;
+}
+#content {
+  position: relative;
+  background: deepskyblue;
+  overflow: hidden;
+  width: 100%;
+}
+#content .list {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /*头部过渡的时候加一个*/
+  transition: 1s top;
+  /*第一屏 start*/
+  /*第一屏 end*/
+  /*第er屏start*/
+  /*第三   屏样式start*/
+  /*第三屏样式end*/
+  /*第四屏 start*/
+  /*第四屏 end*/
+  /*第五屏  start*/
+  /*第五屏 end*/
+}
+#content .list > li {
+  position: relative;
+  /*整个背景图位置都居中，放大缩小时，不会偏移*/
+  background-position: 50% 50% !important;
+}
+#content .list > li > div {
+  width: 1100px;
+  height: 520px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+#content .list .home {
+  position: relative;
+  z-index: 3;
+  background: url(../img/bg3.jpg) no-repeat;
+}
+#content .list .home .home1 {
+  transition: 1s;
+  height: 100%;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+#content .list .home .home1 li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  visibility: hidden;
+  /*点击左边*/
+}
+#content .list .home .home1 li.active {
+  visibility: visible;
+}
+#content .list .home .home1 li:nth-child(1) {
+  background: #dc6c5f;
+}
+#content .list .home .home1 li:nth-child(2) {
+  background: #95dc84;
+}
+#content .list .home .home1 li:nth-child(3) {
+  background: #64b9d2;
+}
+#content .list .home .home1 li:nth-child(4) {
+  background: #000000;
+}
+#content .list .home .home1 li > .item {
+  color: white;
+  text-align: center;
+  margin-top: 200px;
+}
+#content .list .home .home1 li.leftHide {
+  animation: 1s lh ;
+  visibility: hidden;
+}
+#content .list .home .home1 li.rightShow {
+  animation: 1s rs ;
+  visibility: visible;
+}
+@keyframes lh {
+  0% {
+    visibility: visible;
+  }
+  50% {
+    transform: translate(-40%, 0) rotateY(30deg) scale(0.8);
+  }
+  100% {
+    transform: translateZ(-200px);
+  }
+}
+@keyframes rs {
+  0% {
+    visibility: hidden;
+    transform: translateZ(-200px);
+  }
+  50% {
+    transform: translate(40%, 0) rotateY(-30deg) scale(0.8);
+  }
+}
+#content .list .home .home1 li.rightHide {
+  animation: 1s rh ;
+  visibility: hidden;
+}
+#content .list .home .home1 li.leftShow {
+  animation: 1s ls ;
+  visibility: visible;
+}
+@keyframes rh {
+  0% {
+    visibility: visible;
+  }
+  50% {
+    transform: translate(40%, 0) rotateY(-30deg) scale(0.8);
+  }
+  100% {
+    transform: translateZ(-200px);
+  }
+}
+@keyframes ls {
+  0% {
+    visibility: hidden;
+    transform: translateZ(-200px);
+  }
+  50% {
+    transform: translate(-40%, 0) rotateY(30deg) scale(0.8);
+  }
+}
+#content .list .home .home2 {
+  transition: 1s ;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+#content .list .home .home2 > li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  box-shadow: 0 0 4px rgba(25, 25, 25, 0.8);
+  cursor: pointer;
+}
+#content .list .home .home2 > li.active {
+  background: white;
+  cursor: default;
+}
+#content .list .course {
+  position: relative;
+  z-index: 2 ;
+  background: url(../img/bg2.jpg) no-repeat;
+  /*第三屏end*/
+}
+#content .list .course .plane1 {
+  width: 359px;
+  height: 283px;
+  background: url(../img/plane1.png) no-repeat;
+  position: absolute;
+  left: 300px;
+  top: -100px;
+  transition: 1s;
+}
+#content .list .course .plane2 {
+  width: 309px;
+  height: 249px;
+  background: url(../img/plane2.png) no-repeat;
+  position: absolute;
+  left: -100px;
+  top: 200px;
+  transition: 1s;
+}
+#content .list .course .plane3 {
+  width: 230px;
+  height: 182px;
+  background: url(../img/plane3.png) no-repeat;
+  position: absolute;
+  left: 300px;
+  top: 400px;
+  transition: 1s;
+}
+#content .list .course .course1 {
+  margin: 50px;
+  z-index: 3;
+  position: relative;
+}
+#content .list .course .course2 {
+  z-index: 3;
+  position: relative;
+  width: 400px;
+  margin-left: 50px;
+  color: white;
+  overflow: hidden;
+}
+#content .list .course .course3 {
+  z-index: 3;
+  position: absolute;
+  right: 50px;
+  top: 70px;
+  width: 480px;
+}
+#content .list .course .course3 .line {
+  position: absolute;
+  top: -5px;
+  display: inline-block;
+  width: 9px;
+  height: 410px;
+  background: url(../img/plus_row.png) no-repeat;
+}
+#content .list .course .course3 .line:nth-child(1) {
+  left: -6px;
+}
+#content .list .course .course3 .line:nth-child(2) {
+  left: 114px;
+}
+#content .list .course .course3 .line:nth-child(3) {
+  left: 234px;
+}
+#content .list .course .course3 .line:nth-child(4) {
+  left: 354px;
+}
+#content .list .course .course3 .line:nth-child(5) {
+  left: 474px;
+}
+#content .list .course .course3 .item {
+  width: 120px;
+  height: 132px;
+  float: left;
+  margin-top: 1px;
+  position: relative;
+  perspective: 1000px;
+}
+#content .list .course .course3 .item:hover .face {
+  transform: rotateY(0deg);
+}
+#content .list .course .course3 .item:hover .picface {
+  transform: rotateY(360deg);
+}
+#content .list .course .course3 .item .picface {
+  padding: 15px;
+  box-sizing: border-box;
+  /*为了撑开*/
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+  transition: 1.5s transform;
+  background: url(../img/binoli.png) no-repeat;
+  background-position: 50% 50%;
+}
+#content .list .course .course3 .item .picface:nth-of-type(2) {
+  background: url(../img/bks.png) no-repeat;
+  background-position: 50% 50%;
+}
+#content .list .course .course3 .item .face {
+  padding: 15px;
+  box-sizing: border-box;
+  background: #009ee0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+  transition: 1.5s transform;
+}
+#content .list .works {
+  background: url(../img/bg5.jpg) no-repeat;
+  /*works2 start*/
+  /* works2 end*/
+  /* works3 start*/
+  /* works3 end*/
+}
+#content .list .works .pencel1 {
+  width: 180px;
+  height: 97px;
+  background: url(../img/pencel1.png) no-repeat;
+  position: absolute;
+  transition: 1s;
+  left: 500px;
+  top: 0;
+}
+#content .list .works .pencel2 {
+  width: 268px;
+  height: 38px;
+  background: url(../img/pencel2.png) no-repeat;
+  position: absolute;
+  transition: 1s;
+  left: 300px;
+  top: 250px;
+}
+#content .list .works .pencel3 {
+  width: 441px;
+  height: 231px;
+  background: url(../img/pencel3.png) no-repeat;
+  position: absolute;
+  transition: 1s;
+  left: 650px;
+  top: 300px;
+}
+#content .list .works .commonTitle {
+  margin: 50px 0 100px 50px;
+}
+#content .list .works .works2 {
+  position: relative;
+  z-index: 3;
+  padding-left: 50px;
+}
+#content .list .works .works2 .item {
+  position: relative;
+  float: left;
+  width: 220px;
+  height: 133px;
+  overflow: hidden;
+  margin: 0 1px ;
+}
+#content .list .works .works2 .item img {
+  transition: 1s;
+}
+#content .list .works .works2 .item:hover img {
+  transform: scale(1.5) rotate(40deg);
+}
+#content .list .works .works2 .item:hover .mask {
+  opacity: 1;
+}
+#content .list .works .works2 .item .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(25, 25, 25, 0.8);
+  opacity: 0;
+  color: white;
+  padding: 15px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+#content .list .works .works2 .item .icon {
+  background: url(../img/zoomico.png) no-repeat;
+  height: 32px;
+  width: 34px;
+  margin: 10px auto;
+  cursor: pointer;
+  transition: .5s;
+}
+#content .list .works .works2 .item .icon:hover {
+  background-position: 0 -36px;
+}
+#content .list .works .works2 .item:last-of-type {
+  width: 332px;
+}
+#content .list .works .works3 {
+  z-index: 3;
+  width: 167px;
+  height: 191px;
+  background: url(../img/robot.png) no-repeat;
+  position: absolute;
+  left: 900px;
+  top: 170px;
+  /*定义动画，关键帧+循环时间10s 匀速 无线循环  */
+  animation: works3Move 10s infinite linear;
+}
+@keyframes works3Move {
+  /*50%到位置为left450px的地方，到起点算一个侦*/
+  0% {
+    transform: rotateY(0);
+  }
+  /*开始是不动*/
+  49% {
+    transform: rotateY(0);
+  }
+  /*49%的时候就还是保持原来的状态*/
+  50% {
+    left: 450px;
+    transform: rotateY(180deg);
+  }
+  /*到50%时候就旋转180deg*/
+  100% {
+    transform: rotateY(180deg);
+  }
+  /*到100%再旋转*/
+}
+#content .list .about {
+  background: url(../img/bg1.jpg) no-repeat;
+}
+#content .list .about .about1 {
+  margin: 50px 0 100px 50px;
+}
+#content .list .about .about2 {
+  width: 400px;
+  margin-left: 50px;
+}
+#content .list .about .item {
+  width: 260px;
+  height: 200px;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px ;
+  z-index: 1;
+  overflow: hidden;
+}
+#content .list .about .item:nth-child(1) {
+  position: absolute;
+  left: 750px;
+  top: 50px;
+  transition: 1s transform;
+}
+#content .list .about .item:nth-child(1) .pic {
+  width: 100%;
+  height: 100%;
+  background: url(../img/about2.jpg) no-repeat;
+  transform: scale(1.5);
+  transition: 1s transform;
+}
+#content .list .about .item:nth-child(2) {
+  position: absolute;
+  left: 600px;
+  top: 290px;
+  transition: 1s transform;
+}
+#content .list .about .item:nth-child(2) .pic {
+  width: 100%;
+  height: 100%;
+  background: url(../img/about4.jpg) no-repeat;
+  transform: scale(1.5);
+  transition: 1s transform;
+}
+#content .list .about .item ul {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+#content .list .about .item ul li {
+  overflow: hidden;
+  float: left;
+  position: relative;
+}
+#content .list .about .item ul li img {
+  position: absolute;
+  transition: 1s left,1s top;
+}
+#content .list .about .item:hover .pic {
+  transform: scale(1);
+  transition: 0.5s;
+}
+#content .list .about .line {
+  width: 357px;
+  height: 998px;
+  background: url(../img/greenLine.png) no-repeat;
+  position: absolute;
+  left: 50%;
+  top: -25px;
+}
+#content .list .team {
+  position: relative;
+  z-index: 2;
+  background: url(../img/bg3.jpg) no-repeat;
+}
+#content .list .team .team1,
+#content .list .team .team2 {
+  margin: 50px;
+  width: 400px;
+}
+#content .list .team .team1 {
+  float: left;
+  transition: 1s transform;
+}
+#content .list .team .team2 {
+  float: right;
+  transition: 1s transform;
+}
+#content .list .team .team3 {
+  width: 944px;
+  height: 448px;
+  position: absolute;
+  left: 50%;
+  margin-left: -472px;
+  bottom: -150px;
+}
+#content .list .team .team3 > ul > li {
+  width: 118px;
+  height: 448px;
+  float: left;
+  background: url(../img/team.png) no-repeat;
+}
+#content .list .team .team3 > ul > li:nth-child(2) {
+  background-position: -118px 0;
+}
+#content .list .team .team3 > ul > li:nth-child(3) {
+  background-position: -236px 0;
+}
+#content .list .team .team3 > ul > li:nth-child(4) {
+  background-position: -354px 0;
+}
+#content .list .team .team3 > ul > li:nth-child(5) {
+  background-position: -472px 0;
+}
+#content .list .team .team3 > ul > li:nth-child(6) {
+  background-position: -590px 0;
+}
+#content .list .team .team3 > ul > li:nth-child(7) {
+  background-position: -708px 0;
+}
+#content .list .team .team3 > ul > li:nth-child(8) {
+  background-position: -826px 0;
+}
+/*头部的样式end*/
